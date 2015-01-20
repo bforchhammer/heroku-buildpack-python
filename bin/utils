@@ -92,10 +92,10 @@ sub-env() {
   )
 }
 
-sub-env-compress() {
+sub-env-all() {
 
-  WHITELIST=${2:-'^(DJANGO_SETTINGS_MODULE)$'}
-  BLACKLIST=${3:-'^(GIT_DIR|PYTHONHOME|LD_LIBRARY_PATH|LIBRARY_PATH)$'}
+  WHITELIST=${2:-''}
+  BLACKLIST=${3:-''}
 
   (
     if [ -d "$ENV_DIR" ]; then
