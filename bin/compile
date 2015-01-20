@@ -173,7 +173,7 @@ sub-env $BIN_DIR/steps/pip-install
 sub-env $BIN_DIR/steps/collectstatic
 
 # Django compress support (without subenv).
-$BIN_DIR/steps/compress
+sub-env-compress $BIN_DIR/steps/compress
 
 # ### Finalize
 #
