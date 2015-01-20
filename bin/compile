@@ -172,6 +172,8 @@ sub-env $BIN_DIR/steps/pip-install
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
+# Django collectstatic support.
+sub-env $BIN_DIR/steps/compress
 
 # ### Finalize
 #
