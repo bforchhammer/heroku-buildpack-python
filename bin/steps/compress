@@ -13,7 +13,7 @@ if [ ! "$DISABLE_COMPRESS" ] && [ -f "$MANAGE_FILE" ]; then
     set +e
 
     echo "-----> Compressing assets"
-    python $MANAGE_FILE compress 2>&1 | indent
+    python $MANAGE_FILE compress --settings=$DJANGO_SETTINGS_MODULE 2>&1 | indent
 
     [ $? -ne 0 ] && {
         echo " !     Error running 'manage.py compress'."
